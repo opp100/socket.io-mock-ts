@@ -2,7 +2,7 @@ name: Typechecking
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - '**.ts'
       - '**.tsx'
@@ -34,7 +34,6 @@ jobs:
           node-version: 16
           cache: 'yarn'
 
-      # TODO: Install not all dependencies, but only those required for this workflow
       - name: Install dependencies
         run: yarn install --immutable
 
