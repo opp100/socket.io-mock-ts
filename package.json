@@ -15,10 +15,11 @@
     }
   },
   "scripts": {
-    "build": "rimraf dist && yarn lint && yarn test && vite build",
+    "build": "rimraf dist && npm test && vite build",
     "build:skip": "rimraf dist && vite build",
     "preview": "vite preview",
     "lint": "eslint \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "pretest": "npm run lint",
     "tsc": "tsc",
     "test": "vitest run",
     "coverage": "vitest run --coverage",
