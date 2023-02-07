@@ -62,8 +62,9 @@ export class SocketServerMock extends Emitter {
     super();
 
     this.handshake = handshake ?? {};
-    this.clientMock = new SocketClientMock(this);
     this.rooms = [];
+
+    this.clientMock = this.connect();
 
     this._emitFn = Emitter.prototype.emit;
     this.generalCallbacks = {};
@@ -78,10 +79,6 @@ export class SocketServerMock extends Emitter {
         };
       },
     };
-
-    this.clientMock.connected = true;
-    this.clientMock.disconnected = false;
-    this.emit('connect');
   }
 
   /**
@@ -175,6 +172,20 @@ export class SocketServerMock extends Emitter {
         }
       },
     };
+  };
+
+  /**
+   * Connect the socket server.
+   */
+  connect = (): SocketClientMock => {
+    this.clientMock = new SocketClientMock(this);
+
+    this.clientMock.connected = true;
+    this.clientMock.disconnected = false;
+
+    this.emit('connect');
+
+    return this.clientMock;
   };
 }
 

@@ -92,6 +92,15 @@ export class SocketClientMock extends Emitter {
   disconnect = () => {
     return this.close();
   };
+
+  /**
+   * Connect the socket manually.
+   */
+  connect = () => {
+    this.serverMock.connect();
+
+    return this;
+  };
 }
 
 export default SocketClientMock;
