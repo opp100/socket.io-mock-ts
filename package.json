@@ -1,6 +1,6 @@
 {
   "name": "@opp100/socket.io-mock-ts",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Mocked version of Socket.IO for testing",
   "files": [
     "dist"
