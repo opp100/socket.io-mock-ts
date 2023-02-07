@@ -98,8 +98,6 @@ export class SocketClientMock extends Emitter {
    */
   connect = () => {
     this.serverMock.connect();
-
-    return this;
   };
 }
 
