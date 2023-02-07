@@ -175,7 +175,7 @@ export class SocketServerMock extends Emitter {
   };
 
   /**
-   * Connect the socket server.
+   * Mock connect the socket server.
    */
   connect = (): SocketClientMock => {
     this.clientMock = new SocketClientMock(this);
