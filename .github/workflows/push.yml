@@ -6,12 +6,19 @@ on:
       - 'main'
       - 'master'
 
+permissions:
+    contents: write
+
 jobs:
   bump-version:
     name: 'Bump Version on master'
     runs-on: ubuntu-latest
 
     steps:
+      - name: 'Setup Node.js'
+        uses: 'actions/setup-node@v1'
+        with:
+          node-version: 16
       - name: 'Checkout source code'
         uses: 'actions/checkout@v2'
         with:
