@@ -11,7 +11,7 @@ A mock to test the Socket.IO library implementation.
 # Installation
 
 ```bash
-yarn add socket.io-mock-ts
+npm install @opp100/socket.io-mock-ts -D
 ```
 
 # Usage
