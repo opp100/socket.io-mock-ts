@@ -19,7 +19,7 @@ npm install @opp100/socket.io-mock-ts -D
 Create a new socket mock with:
 
 ```ts
-import { SocketServerMock } from 'socket.io-mock-ts';
+import { SocketServerMock } from '@opp100/socket.io-mock-ts';
 
 const socket = new SocketServerMock();
 
@@ -31,7 +31,7 @@ And use the socket as if it was a normal Socket.IO socket.
 For example:
 
 ```ts
-import { SocketServerMock } from 'socket.io-mock-ts';
+import { SocketServerMock } from '@opp100/socket.io-mock-ts';
 import { expect, test } from 'vitest';
 
 test('Sockets should be able to talk to each other without a server', () => {
@@ -48,7 +48,7 @@ test('Sockets should be able to talk to each other without a server', () => {
 Or with using promises in unit tests, for example:
 
 ```ts
-import { SocketServerMock } from 'socket.io-mock-ts';
+import { SocketServerMock } from '@opp100/socket.io-mock-ts';
 import { expect, test } from 'vitest';
 
 test('Sockets should be able to talk to each other without a server', () => {
